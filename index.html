@@ -1,15 +1,298 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TechNova builds secure, scalable software for modern teams." />
+  <title>TechNova — Modern Tech Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-    <h1>Welcome to my page!</h1>
-    <p>This is a paragraph of text.</p>
-    <img src="image.jpg" alt="An image">
-    <script src="script.js"></script>
+  <!-- Top Nav -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <span class="brand-mark" aria-hidden="true">◼</span>
+        <span class="brand-name">TechNova</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#features">Features</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+          <span aria-hidden="true">☾</span>
+        </button>
+        <a class="btn btn-primary" href="#contact">Get a Quote</a>
+      </div>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#services">Services</a>
+      <a href="#features">Features</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-primary" href="#contact">Get a Quote</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="badge">Secure • Scalable • Reliable</p>
+          <h1>Build smarter tech for modern teams.</h1>
+          <p class="lead">
+            We design and deliver cloud-ready solutions—web apps, automation, and integrations—
+            with performance and security built in.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#contact">Start a Project</a>
+            <a class="btn btn-secondary" href="#work">View Case Studies</a>
+          </div>
+
+          <div class="hero-stats" role="list">
+            <div class="stat" role="listitem">
+              <div class="stat-value">99.9%</div>
+              <div class="stat-label">Uptime target</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="stat-value">2–6w</div>
+              <div class="stat-label">Delivery cycles</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="stat-value">ISO-ready</div>
+              <div class="stat-label">Security approach</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="Product preview">
+          <div class="card-header">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+            <span class="card-title">Platform Overview</span>
+          </div>
+
+          <div class="card-body">
+            <div class="kpi">
+              <div>
+                <div class="kpi-label">Latency</div>
+                <div class="kpi-value">42 ms</div>
+              </div>
+              <div class="chip">Optimized</div>
+            </div>
+
+            <div class="kpi">
+              <div>
+                <div class="kpi-label">Requests / day</div>
+                <div class="kpi-value">1.2M</div>
+              </div>
+              <div class="chip">Autoscale</div>
+            </div>
+
+            <div class="mini-chart" aria-hidden="true">
+              <span style="height: 40%"></span>
+              <span style="height: 65%"></span>
+              <span style="height: 55%"></span>
+              <span style="height: 80%"></span>
+              <span style="height: 60%"></span>
+              <span style="height: 90%"></span>
+              <span style="height: 72%"></span>
+            </div>
+
+            <p class="muted">
+              A clean, modern layout you can easily customize with your own branding, screenshots, and content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Services built for real operations</h2>
+          <p class="muted">From planning to deployment, we help teams ship dependable solutions.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Cloud & DevOps</h3>
+            <p class="muted">CI/CD pipelines, monitoring, cost optimization, infrastructure as code.</p>
+            <ul class="list">
+              <li>Observability dashboards</li>
+              <li>Secure deployments</li>
+              <li>Scaling strategies</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Web Applications</h3>
+            <p class="muted">Fast, responsive apps with a clean UI and strong backend architecture.</p>
+            <ul class="list">
+              <li>React / Node</li>
+              <li>APIs & integrations</li>
+              <li>Performance tuning</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Automation</h3>
+            <p class="muted">Reduce manual work using workflows, scripts, and system integrations.</p>
+            <ul class="list">
+              <li>Reporting automation</li>
+              <li>Data pipelines</li>
+              <li>Alerts & notifications</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section alt" id="features">
+      <div class="container">
+        <div class="section-head">
+          <h2>Why teams choose us</h2>
+          <p class="muted">Professional delivery, predictable outcomes, and clean documentation.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="feature">
+            <h3>Security-first</h3>
+            <p class="muted">Least privilege, secrets management, audit-friendly workflows, secure defaults.</p>
+          </div>
+          <div class="feature">
+            <h3>Performance by design</h3>
+            <p class="muted">Caching, efficient queries, and monitoring baked in from day one.</p>
+          </div>
+          <div class="feature">
+            <h3>Clear communication</h3>
+            <p class="muted">Weekly updates, milestones, and delivery checklists you can track.</p>
+          </div>
+          <div class="feature">
+            <h3>Maintainable code</h3>
+            <p class="muted">Readable structure, testing, and handover docs your team can build on.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work / Case Studies -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-head">
+          <h2>Recent work</h2>
+          <p class="muted">A few example project types (swap this for your real portfolio).</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <p class="tag">Analytics</p>
+            <h3>Operations dashboard</h3>
+            <p class="muted">Unified KPIs, alerts, and reporting for service teams.</p>
+          </article>
+
+          <article class="card">
+            <p class="tag">Integrations</p>
+            <h3>API modernization</h3>
+            <p class="muted">Secure API layer + automated workflows and monitoring.</p>
+          </article>
+
+          <article class="card">
+            <p class="tag">Automation</p>
+            <h3>Workflow engine</h3>
+            <p class="muted">Reduced manual processing time with smart routing + validations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section alt" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <h2>Let’s build something solid.</h2>
+          <p class="muted">
+            Tell us what you’re working on and we’ll respond with next steps and a simple plan.
+          </p>
+
+          <div class="contact-cards">
+            <div class="mini-card">
+              <div class="mini-title">Email</div>
+              <div class="mini-value">hello@technova.example</div>
+            </div>
+            <div class="mini-card">
+              <div class="mini-title">Response time</div>
+              <div class="mini-value">Within 1 business day</div>
+            </div>
+          </div>
+        </div>
+
+        <form class="form card" id="contactForm">
+          <div class="form-row">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@company.com" required />
+            </label>
+          </div>
+
+          <label>
+            What do you need?
+            <select name="topic" required>
+              <option value="" disabled selected>Select one</option>
+              <option>Web application</option>
+              <option>Automation</option>
+              <option>Cloud & DevOps</option>
+              <option>Consultation</option>
+            </select>
+          </label>
+
+          <label>
+            Message
+            <textarea name="message" rows="5" placeholder="Briefly describe your project..." required></textarea>
+          </label>
+
+          <button class="btn btn-primary" type="submit">Send Message</button>
+          <p class="form-note muted" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> TechNova. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
